@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Depression Prediction Result And Suggestion</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Add your CSS styles here */
+        body {
+            background-color: #050f18; /* Light sky blue */
+        }
+        .container {
+            margin-top: 50px;
+            background-color: #2f2064; /* White */
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(163, 161, 161, 0.1); /* Add a subtle shadow */
+        }
+        h1 {
+            color: #007bff; /* Blue */
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #e9ecef; /* Gray */
+            color: #007bff; /* Blue */
+        }
+    </style>
+<body>
+    <div class="container">
+        <h1 class="text-center">Depression Prediction Result</h1>
+        <div class="result text-center">
+            <!-- <h2>Prediction Result:</h2> -->
+            <p>{{ result|replace("\n", "<br>")|safe }}</p>
+            <a href="/" class="btn btn-primary">Home</a>
+        </div>
+    </div>
+</body>
+</html>

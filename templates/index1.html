@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Depression Prediction</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Add your CSS styles here */
+        body {
+            background-color: #050f18; /* Light sky blue */
+        }
+        .container {
+            margin-top: 50px;
+            background-color: #2f2064; /* White */
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(163, 161, 161, 0.1); /* Add a subtle shadow */
+        }
+        h1 {
+            color: #007bff; /* Blue */
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-label {
+            font-weight: bold;
+            color: #d5d9dd; /* Gray */
+        }
+        .btn-primary {
+            background-color: #007bff; /* Blue */
+            border-color: #0070cc; /* Darker blue */
+        }
+        .form-check-input {
+            margin-right: 10px;
+        }
+        .form-check-label {
+            color: #d5d9dd; /* Gray */
+            font-weight: normal;
+        }
+        .form-check-label:hover {
+            cursor: pointer;
+            color: #007bff; /* Blue */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Depression Prediction</h1>
+        <form method="post" action="/page2">
+            <div class="form-group">
+                <label for="symptoms_of_depression_frequency" class="form-label">Symptoms of depression frequency:</label>
+                <select class="form-control" name="symptoms_of_depression_frequency" id="symptoms_of_depression_frequency">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Engage in stress-relief activities:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="engage_in_stress_relief_activities" id="stress_yes" value="Yes">
+                    <label class="form-check-label" for="stress_yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="engage_in_stress_relief_activities" id="stress_no" value="No">
+                    <label class="form-check-label" for="stress_no">No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Feel pressure to excel academically:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="feel_pressure_to_excel_academically" id="pressure_yes" value="Yes">
+                    <label class="form-check-label" for="pressure_yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="feel_pressure_to_excel_academically" id="pressure_no" value="No">
+                    <label class="form-check-label" for="pressure_no">No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Academic counseling or support:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="academic_counseling_or_support" id="counseling_yes" value="Yes">
+                    <label class="form-check-label" for="counseling_yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="academic_counseling_or_support" id="counseling_no" value="No">
+                    <label class="form-check-label" for="counseling_no">No</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Next</button>
+        </form>
+    </div>
+</body>
+</html>

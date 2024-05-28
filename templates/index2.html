@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Depression Prediction - Page 2</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Add your CSS styles here */
+        body {
+            background-color: #050f18; /* Light sky blue */
+        }
+        .container {
+            margin-top: 50px;
+            background-color: #2f2064; /* White */
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(163, 161, 161, 0.1); /* Add a subtle shadow */
+        }
+        h1 {
+            color: #007bff; /* Blue */
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-label {
+            font-weight: bold;
+            color: #d5d9dd; /* Gray */
+        }
+        .btn-primary {
+            background-color: #007bff; /* Blue */
+            border-color: #0070cc; /* Darker blue */
+        }
+        .form-check-input {
+            margin-right: 10px;
+        }
+        .form-check-label {
+            color: #d5d9dd; /* Gray */
+            font-weight: normal;
+        }
+        .form-check-label:hover {
+            cursor: pointer;
+            color: #007bff; /* Blue */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Depression Prediction</h1>
+        <form method="post" action="/page3">
+            <!-- Add your questions for page 2 -->
+            <div class="form-group">
+                <label class="form-label">Engaging in self-harming behaviors:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="engaging_in_self_harming_behaviors" id="self_harm_yes" value="Yes">
+                    <label class="form-check-label" for="self_harm_yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="engaging_in_self_harming_behaviors" id="self_harm_no" value="No">
+                    <label class="form-check-label" for="self_harm_no">No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Professional help or counseling for self-harm:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="professional_help_or_counseling_for_self_harm" id="help_self_harm_yes" value="Yes">
+                    <label class="form-check-label" for="help_self_harm_yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="professional_help_or_counseling_for_self_harm" id="help_self_harm_no" value="No">
+                    <label class="form-check-label" for="help_self_harm_no">No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Facing discrimination related to your mental health issues:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="facing_discrimination_related_to_your_mental_health_issues" id="discrimination_yes" value="Yes">
+                    <label class="form-check-label" for="discrimination_yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="facing_discrimination_related_to_your_mental_health_issues" id="discrimination_no" value="No">
+                    <label class="form-check-label" for="discrimination_no">No</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Next</button>
+        </form>
+    </div>
+</body>
+</html>

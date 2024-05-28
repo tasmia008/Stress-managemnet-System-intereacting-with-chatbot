@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Depression Prediction</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0f202e; /* Light sky blue */
+        }
+        .container {
+            margin-top: 50px;
+            background-color: #fff; /* White */
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+        }
+        h1 {
+            color: #007bff; /* Blue */
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-label {
+            font-weight: bold;
+            color: #6c757d; /* Gray */
+        }
+        .form-select, .form-check-input {
+            margin-bottom: 0.5rem;
+        }
+        .btn-primary {
+            background-color: #007bff; /* Blue */
+            border-color: #0070cc; /* Darker blue */
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #e9ecef; /* Gray */
+            color: #007bff; /* Blue */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Depression Prediction</h1>
+        <form method="post">
+            <div class="form-group">
+                <label for="symptoms_of_depression_frequency" class="form-label">Symptoms of depression frequency:</label>
+                <select class="form-control" name="symptoms_of_depression_frequency" id="symptoms_of_depression_frequency">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Engage in stress-relief activities:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="engage_in_stress_relief_activities" id="stress_yes" value="Yes">
+                    <label class="form-check-label" for="stress_yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="engage_in_stress_relief_activities" id="stress_no" value="No">
+                    <label class="form-check-label" for="stress_no">No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Feel pressure to excel academically:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="feel_pressure_to_excel_academically" id="pressure_yes" value="Yes">
+                    <label class="form-check-label" for="pressure_yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="feel_pressure_to_excel_academically" id="pressure_no" value="No">
+                    <label class="form-check-label" for="pressure_no">No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Academic counseling or support:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="academic_counseling_or_support" id="counseling_yes" value="Yes">
+                    <label class="form-check-label" for="counseling_yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="academic_counseling_or_support" id="counseling_no" value="No">
+                    <label class="form-check-label" for="counseling_no">No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Engaging in self-harming behaviors:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="engaging_in_self_harming_behaviors" id="self_harm_yes" value="Yes">
+                    <label class="form-check-label" for="self_harm_yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="engaging_in_self_harming_behaviors" id="self_harm_no" value="No">
+                    <label class="form-check-label" for="self_harm_no">No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Professional help or counseling for self-harm:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="professional_help_or_counseling_for_self_harm" id="help_self_harm_yes" value="Yes">
+                    <label class="form-check-label" for="help_self_harm_yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="professional_help_or_counseling_for_self_harm" id="help_self_harm_no" value="No">
+                    <label class="form-check-label" for="help_self_harm_no">No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Facing discrimination related to your mental health issues:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="facing_discrimination_related_to_your_mental_health_issues" id="discrimination_yes" value="Yes">
+                    <label class="form-check-label" for="discrimination_yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="facing_discrimination_related_to_your_mental_health_issues" id="discrimination_no" value="No">
+                    <label class="form-check-label" for="discrimination_no">No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="accessible_counseling_services" class="form-label">Accessible counseling services:</label>
+                <select class="form-control" name="accessible_counseling_services" id="accessible_counseling_services">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="contribution_of_lack_of_sleep_on_stress_level" class="form-label">Contribution of lack of sleep on stress level:</label>
+                <select class="form-control" name="contribution_of_lack_of_sleep_on_stress_level" id="contribution_of_lack_of_sleep_on_stress_level">
+                    <option value="1">1</option>
+                    <option value="2">2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Gender:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="gender_female" value="Female">
+                    <label class="form-check-label" for="gender_female">Female</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="gender_male" value="Male">
+                    <label class="form-check-label" for="gender_male">Male</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Diagnosed with depression:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="diagnosed_with_depression" id="diagnosed_yes" value="Yes">
+                    <label class="form-check-label" for="diagnosed_yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="diagnosed_with_depression" id="diagnosed_no" value="No">
+                    <label class="form-check-label" for="diagnosed_no">No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Professional help or counseling for depression target:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="professional_help_or_counseling_for_depression_target" id="help_depression_yes" value="Yes">
+                    <label class="form-check-label" for="help_depression_yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="professional_help_or_counseling_for_depression_target" id="help_depression_no" value="No">
+                    <label class="form-check-label" for="help_depression_no">No</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Predict</button>
+        </form>
+
+        {% if result %}
+        <div class="result text-center">
+            <h2>Prediction Result: {{ result }}</h2>
+        </div>
+        {% endif %}
+    </div>
+    <!-- Include Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
